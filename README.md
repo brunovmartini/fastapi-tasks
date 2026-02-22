@@ -1,4 +1,4 @@
-# Evoluum Tasks
+# Fast-API-Tasks
 
 **Fast-API-Tasks** is a web application created with Fast API for managing users and tasks.
 
