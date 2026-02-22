@@ -3,7 +3,7 @@ from fastapi import FastAPI
 from tasks.views import tasks_router
 from users.views import users_router
 
-app = FastAPI(title='Evoluum Tasks')
+app = FastAPI(title='Fast-API-Tasks')
 app.include_router(users_router)
 app.include_router(tasks_router)
 
