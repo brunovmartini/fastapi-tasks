@@ -1,19 +1,19 @@
 # Evoluum Tasks
 
-O **Evoluum Tasks** é o sistema responsável pelo cadastro de tarefas de usuários.
+**Fast-API-Tasks** is a web application created with Fast API for managing users and tasks.
 
-### Requisitos 🗒️
+### Requirements 🗒️
 
-- Python 3.10.12. A sugestão é usar o [pyenv](https://github.com/pyenv/pyenv) para instalar o interpretador Python com mais facilidade na versão desejada.
-- Instalação de bibliotecas.
-- Arquivo .env criado na raiz do diretório com as variáveis de ambiente.
+- Python 3.10.12. It is recommended to use [pyenv](https://github.com/pyenv/pyenv) to install the desired Python interpreter version more easily.
+- Installation of libraries.
+- A .env file created in the root directory with the environment variables.
 
 ---
 
-### Arquitetura e Stack 🛠️
+### Architecture and Stack 🛠️
 
-A arquitetura utilizada é baseada na Clean Architecture, em que a camada de banco de dados e APIs são isolados das regras de negócios. 
-Principais frameworks e bibliotecas:
+The architecture used is based on Clean Architecture, where the database and API layers are isolated from the business rules.
+Main frameworks and libraries:
 
 - FastAPI
 - Pydantic
@@ -21,9 +21,9 @@ Principais frameworks e bibliotecas:
 
 ---
 
-### Execução do código ⚙️
+### Running the Code ⚙️
 
-Recomenda-se criar um virtualenv para isolar as dependências da aplicação. Com o ambiente virtual criado e ativado, rode o comando a seguir
+It is recommended to create a virtualenv to isolate the application dependencies. With the virtual environment created and activated, run the following command:
 
 ```jsx
 pip install -r requirements.txt
@@ -32,43 +32,28 @@ pip install -r requirements.txt
 ---
 
 
-### Principais comandos 💻
+### Main Commands 💻
 
-Para rodar localmente a aplicação no localhost:8000:
+To run the application locally on localhost:8000:
 
 ```jsx
 python main.py
 ```
 
-Em http://localhost:8000/docs é possível verificar a documentação dos endpoints existentes.
+At http://localhost:8000/docs you can check the documentation of the existing endpoints.
 
-Para realizar a criação das tabelas no banco de dados:
+To create the database tables:
 
 ```jsx
 python create_tables.py
 ```
 
 
----
-
-### Publicação 🗒️
-
-A versão de produção publicada da aplicação de backend pode ser acessada pelo endereço:
-
-- https://evoluumtasks.ignorelist.com/
-
-Consequentemente a documentação dos endpoints pode ser visualizada em:
-
-- https://evoluumtasks.ignorelist.com/docs
-
----
-
-
 ### Endpoints 🔄
 
 **POST /users/signup**
 
-Realiza a criação do usuário.
+Creates a new user.
 
 Request Body
 ```jsx
@@ -95,10 +80,10 @@ Successful Response
 
 **POST /users/login**
 
-Realiza o login do usuário.
+Logs in the user.
 
 
-Request body em Form-data
+Request body in Form-data
 ```jsx
 "username": "user@example.com"
 "password": "string"
@@ -120,7 +105,7 @@ Successful Response
 
 **GET /users/{user_id}**
 
-Retorna os dados de um usuário.
+Returns the data of a user.
 
 Successful Response
 
@@ -137,7 +122,7 @@ Successful Response
 
 **GET /users/logged**
 
-Retorna os dados do usuário logado.
+Returns the data of the logged-in user.
 
 Authorization
 ```jsx
@@ -163,7 +148,7 @@ Successful Response
 
 **GET /tasks/{task_id}**
 
-Retorna os dados de uma tarefa específica.
+Returns the data of a specific task.
 
 Successful Response
 
@@ -180,7 +165,7 @@ Successful Response
 
 **GET /tasks**
 
-Retorna os dados das tarefas do usuário logado.
+Returns the tasks of the logged-in user.
 
 Authorization
 ```jsx
@@ -206,7 +191,7 @@ Successful Response
 
 **POST /tasks**
 
-Cria uma tarefa e vincula ao usuário logado.
+Creates a task and links it to the logged-in user.
 
 Authorization
 ```jsx
@@ -240,7 +225,7 @@ Successful Response
 
 **PUT /tasks/{task_id}**
 
-Edita uma tarefa do usuário logado.
+Edits a task of the logged-in user.
 
 Authorization
 ```jsx
@@ -274,7 +259,7 @@ Successful Response
 
 **DELETE /tasks/{task_id}**
 
-Deleta uma tarefa do usuário logado.
+Deletes a task of the logged-in user.
 
 Authorization
 ```jsx
