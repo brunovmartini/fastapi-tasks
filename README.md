@@ -1,6 +1,6 @@
-# FastAPI-Tasks
+# FastAPI Tasks
 
-**FastAPI-Tasks** is a web application created with FastAPI for managing users and tasks.
+**FastAPI Tasks** is a web application created with FastAPI for managing users and tasks.
 
 ### Requirements 🗒️
 
