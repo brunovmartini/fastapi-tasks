@@ -24,3 +24,11 @@ class Setttings(BaseSettings):
 
 
 settings = Setttings()
+
+
+def get_database_url_sync() -> str:
+    """Sync URL for Alembic (psycopg2); the app uses asyncpg at runtime."""
+    url = settings.DB_URL
+    if url.startswith('postgresql+asyncpg://'):
+        return url.replace('postgresql+asyncpg://', 'postgresql://', 1)
+    return url

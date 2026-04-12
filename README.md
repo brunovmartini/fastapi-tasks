@@ -4,15 +4,20 @@
 
 ### Requirements 🗒️
 
-- Python 3.10.12. It is recommended to use [pyenv](https://github.com/pyenv/pyenv) to install the desired Python interpreter version more easily.
-- Installation of libraries.
-- A .env file created in the root directory with the environment variables.
+- Python 3.10.12. It’s recommended to use [pyenv](https://github.com/pyenv/pyenv) to easily install the desired Python version.
+- A `.env` file created at the project root containing the required environment variables.
+- Docker compose installed.
 
 ---
 
-### Architecture and Stack 🛠️
+### Architecture ⚙️
 
 The architecture used is based on Clean Architecture, where the database and API layers are isolated from the business rules.
+
+---
+
+### Stack 🛠️
+
 Main frameworks and libraries:
 
 - FastAPI
@@ -21,7 +26,7 @@ Main frameworks and libraries:
 
 ---
 
-### Running the Code ⚙️
+### Application 💻
 
 It is recommended to create a virtualenv to isolate the application dependencies. With the virtual environment created and activated, run the following command:
 
@@ -29,10 +34,16 @@ It is recommended to create a virtualenv to isolate the application dependencies
 pip install -r requirements.txt
 ```
 
----
+Start the docker container with the following command:
+```jsx
+docker compose up -d
+```
 
+To create or update the database schema:
 
-### Main Commands 💻
+```jsx
+alembic upgrade head
+```
 
 To run the application locally on localhost:8000:
 
@@ -40,16 +51,15 @@ To run the application locally on localhost:8000:
 python main.py
 ```
 
+---
+
+### Documentation ️📖
+
 At http://localhost:8000/docs you can check the documentation of the existing endpoints.
 
-To create the database tables:
+---
 
-```jsx
-python create_tables.py
-```
-
-
-### Endpoints 🔄
+### Endpoints 🌐
 
 **POST /users/signup**
 
