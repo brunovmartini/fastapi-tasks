@@ -2,7 +2,7 @@
 
 **FastAPI Tasks** is a web application created with FastAPI for managing users and tasks.
 
-### Requirements 🗒️
+### Requirements 📋
 
 - Python 3.10.12. It’s recommended to use [pyenv](https://github.com/pyenv/pyenv) to easily install the desired Python version.
 - A `.env` file created at the project root containing the required environment variables.
@@ -28,7 +28,7 @@ Main frameworks and libraries:
 
 ### Application 💻
 
-It is recommended to create a virtualenv to isolate the application dependencies. With the virtual environment created and activated, run the following command:
+It is recommended to create a virtual environment to isolate the application dependencies. With the virtual environment created and activated, run the following command:
 
 ```jsx
 pip install -r requirements.txt
@@ -55,11 +55,11 @@ python main.py
 
 ### Documentation ️📖
 
-At http://localhost:8000/docs you can check the documentation of the existing endpoints.
+At http://localhost:8000/docs is displayed the documentation of the existing endpoints.
 
 ---
 
-### Endpoints 🌐
+### Endpoints 🔁
 
 **POST /users/signup**
 
